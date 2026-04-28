@@ -1,0 +1,136 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{gensymb}
+
+\begin{document}
+{\centering
+\title{Sprawozdanie: Analiza porównawcza ludności wdług poziomu wykształcenia w latach 1978 i 2011.}
+\date{}
+\maketitle}
+
+\section{Wstęp}
+
+\section{Analiza rozkładu przy pomocy metryk statystycznych}
+
+\subsection{Średnia arytmetyczna liczności}
+
+\paragraph{Wzór ogólny}
+\[
+\bar{x} = \frac{x_{1}n_{1} + x_{2}n_{2} + ... + x_{k}n_{k}}{n_{1} + n_{2} + ... + n_{k}} 
+\]
+
+\subsection{Średnia ucinana liczności}
+
+\paragraph{Wzór ogólny}
+\[
+\bar{x} = \frac{x_{i}n_{i} + x_{i+1}n_{i+1} + ... + x_{k-i}n_{k-i}}{n_{i} + n_{i+1} + ... + n_{k-i}} 
+\]
+
+
+\subsection{Mediana}
+
+\paragraph{Wzór ogólny}
+\[
+x_{med} = 
+    \begin{cases}
+        x_{(\frac{k+1}{2})} \text{ dla k nieparzystych}\\
+        \frac{1}{2} (x_{(\frac{k}{2})} + x_{(\frac{k+1}{2})}) \text{ dla k parzystych}
+    \end{cases}
+\]
+
+\subsection{Kwartyle}
+\paragraph{Wzory ogólne}
+\paragraph{Q1}
+\[
+Q_{1} =
+    \begin{cases}
+        x_{(\frac{k+1}{4})} & \text{gdy } \frac{k+1}{4} \in N \\
+        (1-\alpha)\,x_{(\lfloor\frac{k+1}{4}\rfloor)} + \alpha\,x_{(\lceil\frac{k+1}{4}\rceil)}
+        & \text{gdy } \alpha = \frac{k+1}{4} - \lfloor\frac{k+1}{4}\rfloor
+    \end{cases}
+\]
+
+\paragraph{Q2}
+\[
+Q_{2} = x_{med} =
+    \begin{cases}
+        x_{(\frac{k+1}{2})} & \text{dla } k \text{ nieparzystego} \\
+        \frac{1}{2} \left( x_{(\frac{k}{2})} + x_{(\frac{k}{2}+1)} \right)
+        & \text{dla } k \text{ parzystego}
+    \end{cases}
+\]
+
+\paragraph{Q3}
+\[
+Q_{3} =
+    \begin{cases}
+        x_{(\frac{3(k+1)}{4})} & \text{gdy } \frac{3(k+1)}{4} \in N \\
+        (1-\beta)\,x_{(\lfloor\frac{3(k+1)}{4}\rfloor)} + \beta\,x_{(\lceil\frac{3(k+1)}{4}\rceil)}
+        & \text{gdy } \beta = \frac{3(k+1)}{4} - \lfloor\frac{3(k+1)}{4}\rfloor
+    \end{cases}
+\]
+
+\subsection{Rozstęp międzykwartylowy}
+\paragraph{Wzór ogólny}
+\[
+IQR = Q_{3} - Q_{1}
+\]
+
+\subsection{Rozstęp}
+\paragraph{Wzór ogólny}
+\[
+R = x_{(k)} - x_{(1)}
+\]
+
+\subsection{Wariancja i odchylenie standardowe}
+\paragraph{Wzory ogólne}
+\paragraph{Wariancja}
+\[
+\sigma^{2} = \frac{1}{k} \sum_{i=1}^{k} (x_{i} - \bar{x})^{2}
+\qquad
+s^{2} = \frac{1}{k-1} \sum_{i=1}^{k} (x_{i} - \bar{x})^{2}
+\]
+
+\paragraph{Odchylenie standardowe}
+\[
+\sigma = \sqrt{\sigma^{2}}
+\qquad
+s = \sqrt{s^{2}}
+\]
+
+\subsection{Współczynnik zmienniczości}
+\paragraph{Wzory ogólne}
+\[
+CV = \frac{\sigma}{|\mu|} \cdot 100\%
+\qquad
+CV = \frac{s}{|\bar{x}|} \cdot 100\%
+\]
+
+\subsection{Skośność i kurtoza}
+
+\paragraph{Wzory ogólne}
+
+\paragraph{Współczynnik skośności}
+\[
+\gamma_{1} = \frac{\frac{1}{k} \sum_{i=1}^{k} (x_{i} - \bar{x})^{3}}
+                         {\left(\frac{1}{k} \sum_{i=1}^{k} (x_{i} - \bar{x})^{2}\right)^{3/2}}
+\]
+
+\paragraph{Kurtoza}
+\[
+\gamma_{2} = \frac{\frac{1}{k} \sum_{i=1}^{k} (x_{i} - \bar{x})^{4}}
+                         {\left(\frac{1}{k} \sum_{i=1}^{k} (x_{i} - \bar{x})^{2}\right)^{2}}-3
+\]
+
+
+
+\section{Prezentacja rozkładów na wykresach}
+
+\section{Podsumowanie}
+
+
+\end{document}
