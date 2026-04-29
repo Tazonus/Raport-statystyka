@@ -5,6 +5,8 @@
 \usepackage{amsmath}
 \usepackage[margin=0.6in]{geometry}
 \usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{float}
 
 \begin{document}
 {\centering
@@ -151,6 +153,96 @@ CV = \frac{s}{|\bar{x}|} \cdot 100\%
 
 
 \section{Prezentacja rozkładów na wykresach}
+
+W celu graficznego przedstawienia analizowanych danych wykorzystano wykresy liniowe, wykresy kwantyl--kwantyl (QQ-plot) oraz wykresy pudełkowe (boxplot). Pozwalają one na wizualną ocenę rozkładu danych, identyfikację obserwacji odstających, analizę zmienności oraz ocenę podobieństwa rozkładów pomiędzy badanymi latami.
+
+\subsection{Struktura wykształcenia względem wieku}
+
+W celu zobrazowania zmian w strukturze wykształcenia społeczeństwa przedstawiono rozkłady liczby osób według wieku dla trzech poziomów wykształcenia: podstawowego, średniego oraz wyższego, osobno dla roku 1978 oraz 2011.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{wykrespelny1978.png}
+	\caption{Liczba osób według wieku z podziałem na poziom wykształcenia w roku 1978}
+	\label{fig:wykres_1978}
+\end{figure}
+
+Na rysunku~\ref{fig:wykres_1978} widoczna jest dominacja osób z wykształceniem podstawowym niemal w całym analizowanym przekroju wieku. Szczególnie liczna jest populacja osób starszych posiadających wykształcenie podstawowe, co wskazuje na niższy poziom wykształcenia starszych pokoleń w analizowanym okresie. Udział osób z wykształceniem wyższym pozostaje stosunkowo niski, natomiast wykształcenie średnie osiąga największe wartości głównie wśród osób młodych i w średnim wieku.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.95\textwidth]{brave_ojM4trpkHG.png}
+	\caption{Liczba osób według wieku z podziałem na poziom wykształcenia w roku 2011}
+	\label{fig:wykres_2011}
+\end{figure}
+
+W roku 2011 obserwuje się wyraźną zmianę struktury wykształcenia względem roku 1978. Na drugim wykresie widoczny jest znaczący wzrost liczby osób z wykształceniem średnim oraz wyższym, szczególnie w grupach wieku produkcyjnego. Jednocześnie udział osób z wykształceniem podstawowym wyraźnie maleje w młodszych grupach wieku, natomiast koncentruje się głównie wśród osób starszych. Zjawisko to wskazuje na poprawę poziomu wykształcenia społeczeństwa oraz zwiększenie dostępności edukacji średniej i wyższej w kolejnych pokoleniach.
+
+Porównanie obu wykresów jednoznacznie wskazuje na istotną transformację struktury edukacyjnej społeczeństwa. W 1978 roku dominowało wykształcenie podstawowe, natomiast w 2011 roku znacznie większą rolę zaczęły odgrywać wykształcenie średnie i wyższe, szczególnie wśród młodszych i średnich grup wieku. Przez osobne uwzględnianie w 2011 ludzi w wieku 65 - 84, ogon wykresu znacznie zmalał.
+
+\subsection{Porównanie rozkładów pomiędzy rokiem 1978 a 2011 -- QQ-plot}
+
+Do porównania zgodności rozkładów danych pomiędzy analizowanymi latami zastosowano wykresy QQ-plot.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{qqplotpodstawowe.png}
+	\caption{QQ-plot dla osób z wykształceniem podstawowym}
+	\label{fig:qq_podstawowe}
+\end{figure}
+
+W przypadku wykształcenia podstawowego widoczne są największe odchylenia punktów od prostej referencyjnej, szczególnie dla wartości skrajnych. Oznacza to, że rozkład tej grupy uległ największym zmianom pomiędzy 1978 a 2011 rokiem. Potwierdza to wcześniejsze wnioski o silnym przesunięciu tej kategorii do starszych grup wieku.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{qqplotsrednie.png}
+	\caption{QQ-plot dla osób z wykształceniem średnim}
+	\label{fig:qq_srednie}
+\end{figure}
+
+Dla wykształcenia średniego obserwuje się lepsze dopasowanie punktów do linii odniesienia, choć nadal widoczne są umiarkowane odchylenia. Świadczy to o zachowaniu ogólnego kształtu rozkładu przy jednoczesnym przesunięciu jego parametrów położenia.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{qqplotwyzsze.png}
+	\caption{QQ-plot dla osób z wykształceniem wyższym}
+	\label{fig:qq_wyzsze}
+\end{figure}
+
+Największą zgodność rozkładów pomiędzy latami obserwuje się dla osób z wykształceniem wyższym. Punkty układają się blisko linii referencyjnej, co sugeruje względnie stabilny charakter zmian oraz podobieństwo rozkładu po odpowiednim przeskalowaniu danych.
+
+\subsection{Analiza zmienności -- BoxPloty}
+
+W celu wizualizacji rozproszenia danych, kwartylowego rozkładu obserwacji oraz identyfikacji wartości odstających wykorzystano wykresy pudełkowe.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{boxplotpodstawowe1978.png}
+	\caption{Wykres pudełkowy dla wykształcenia podstawowego}
+	\label{fig:box_podstawowe}
+\end{figure}
+
+Wykres pudełkowy dla wykształcenia podstawowego pokazuje największy rozrzut danych oraz obecność silnie odstających obserwacji. Szeroki rozstęp międzykwartylowy potwierdza wysoką zmienność tej grupy.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{boxplotsrednie1978.png}
+	\caption{Wykres pudełkowy dla wykształcenia średniego}
+	\label{fig:box_srednie}
+\end{figure}
+
+W przypadku wykształcenia średniego obserwuje się umiarkowane zróżnicowanie danych. Rozkład jest bardziej skoncentrowany wokół mediany, a liczba obserwacji odstających jest niewielka, co wskazuje na względną stabilność tej grupy.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{boxplotwyzsze1978.png}
+	\caption{Wykres pudełkowy dla wykształcenia wyższego}
+	\label{fig:box_wyzsze}
+\end{figure}
+
+Dla wykształcenia wyższego rozkład cechuje się najmniejszym zakresem zmienności oraz największą regularnością. Wąski rozstęp międzykwartylowy oraz niewielka liczba obserwacji odstających wskazują na większą jednorodność danych w tej grupie.
+
+Graficzna prezentacja danych potwierdza wnioski uzyskane z analizy miar statystyki opisowej. Największe zmiany strukturalne pomiędzy analizowanymi okresami zaszły w grupie osób z wykształceniem podstawowym, natomiast najbardziej stabilny charakter zmian obserwowany jest wśród osób z wykształceniem wyższym.
 
 \section{Podsumowanie}
 
